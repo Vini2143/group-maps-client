@@ -1,9 +1,37 @@
-# Welcome to your Expo app 👋
+# Group Maps Frontend
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is the frontend application for **Group Maps**, built with [Expo](https://expo.dev). It provides a mobile interface for coordinating real-life group activities using geolocation, connecting to the backend service via API.
 
-## Get started
+## Requirements
 
+
+### Prerequisites
+- Node.js (LTS recommended)  
+- npm or yarn  
+- Expo CLI (`npm install -g expo-cli`)  
+- For production builds: your own Google Maps API key  
+
+For reference, specific package versions are listed in `package.json`. Consult this file if you need to check or match dependency versions.
+
+
+---
+
+## Environment Setup
+
+1. Set your server URL in constants/settings.ts:
+   ```javascript
+      const API_URL = 'http://your-server-address.com';
+   ```
+
+2. Google Maps API Key (required for apk builds)
+
+   For production builds, you must add your own Google Maps API key via Expo build configuration (app.config.js or app.json under extra) or using environment variables with expo build.
+
+   Warning: The app will not display maps correctly in production builds without a valid Google Maps API key.
+
+
+
+## Running the App
 1. Install dependencies
 
    ```bash
@@ -25,15 +53,8 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Google Maps API Key (required for production builds)
+For production builds, you must add your own Google Maps API key via Expo build configuration
 
 ## Learn more
 
